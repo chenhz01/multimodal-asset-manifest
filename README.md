@@ -2,6 +2,8 @@
 
 A stdlib-only validator for manifests of image/audio/video assets: schema checks, per-type metadata (dimensions, duration, fps), license fields, sha256 checksums, and optional on-disk existence + hash audit. If you ship multimodal datasets or prompt packs and need a machine-checkable manifest, use this; otherwise skip it.
 
+<p align="center"><img src="docs/demo.gif" alt="demo" width="720"></p>
+
 ## Problem
 
 Multimodal assets pile up faster than their metadata. Files get renamed, checksums rot, licenses go undeclared, and images lack dimensions while videos lack fps — discovered only when a downstream pipeline or license review fails. Teams need one offline, dependency-free gate they can run in CI before an asset bundle ships.
